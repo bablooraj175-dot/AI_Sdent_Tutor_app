@@ -104,7 +104,8 @@ if user_input := st.chat_input("Ask a question (Example: Explain gravity or solv
                 message_placeholder = st.empty()
                 typed_text = ""
 
-                for word in full_response.split():
+                # FIXED: Added (" ") to preserve line breaks!
+                for word in full_response.split(" "):
                     typed_text += word + " "
                     message_placeholder.markdown(typed_text)
                     time.sleep(0.02)
