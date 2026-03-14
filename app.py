@@ -107,7 +107,7 @@ if user_input := st.chat_input("Ask a question (Example: Explain gravity or solv
                 for word in full_response.split():
                     typed_text += word + " "
                     message_placeholder.markdown(typed_text)
-                    st.sleep(0.02)
+                    time.sleep(0.02)
 
             # Save response
             st.session_state.chat_history.append(
